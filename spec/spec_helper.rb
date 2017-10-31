@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "vagrant/rcfile"
+require "vagrant-rcfile"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
