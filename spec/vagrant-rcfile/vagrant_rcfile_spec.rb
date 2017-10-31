@@ -1,8 +1,8 @@
 require "spec_helper"
 
-RSpec.describe Vagrant::Rcfile do
+RSpec.describe VagrantPlugins::VagrantRCFile do
   it "has a version number" do
-    expect(Vagrant::Rcfile::VERSION).not_to be nil
+    expect(VagrantPlugins::VagrantRCFile::VERSION).not_to be nil
   end
 
   it "does something useful" do

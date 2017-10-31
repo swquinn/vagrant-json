@@ -1,24 +1,33 @@
-# Vagrant::Rcfile
+vagrant-rcfile
+==============
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/vagrant/rcfile`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+_vagrant-rcfile_ is a [Vagrant](http://vagrantup.com/) plugin which allows
+you to specify a `.vagrantrc` file that will point to additional configuration
+outside of the `Vagrantfile`. This can allow developers sharing your project
+a means of customizing their environments without having to hack the
+`Vagrantfile` itself.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+### Vagrant ≥ 1.1
 
-```ruby
-gem 'vagrant-rcfile'
+```
+$ vagrant plugin install vagrant-rcfile
 ```
 
-And then execute:
+### Vagrant 1.0 and older
 
-    $ bundle
+Since vagrant v1.0.0 the preferred installation method for vagrant is using the provided packages or installers. If you installed vagrant that way, you need to use vagrant's gem wrapper:
 
-Or install it yourself as:
+```
+$ vagrant gem install vagrant-rcfile
+```
 
-    $ gem install vagrant-rcfile
+If you installed vagrant using RubyGems, use:
+
+```
+$ gem install vagrant-rcfile
+```
 
 ## Usage
 
@@ -26,9 +35,19 @@ TODO: Write usage instructions here
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After cloning the repository, run `bin/setup` to install dependencies. This
+should also install [`vagrant-spec`](https://github.com/hashicorp/vagrant-spec)
+which we will use to run our tests. Once the plugin has been installed, run
+`vagrant-spec test` to run all of the acceptance tests.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+You can also run `bin/console` for an interactive prompt that will allow you
+to experiment.
+
+To install this gem onto your local machine, run `bundle exec rake install`.
+To release a new version, update the version number in `version.rb`, and then
+run `bundle exec rake release`, which will create a git tag for the version,
+push git commits and tags, and push the `.gem` file to
+[rubygems.org](https://rubygems.org).
 
 ## Contributing
 
